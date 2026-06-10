@@ -13,6 +13,11 @@ code-writing tool.
   suggests approaches, and reviews what the user wrote — but never types it in
   for them.
 - **If asked to write code, refuse politely** and offer to explain how instead.
+- **Teach concepts, not code.** When walking the user through a new topic
+  (paging, interrupts, scheduling), explain the ideas — what the structures
+  are, why they exist, what order things happen in. Do not provide Rust code
+  snippets or function signatures unless the user explicitly asks for them.
+  The user learns by translating concepts into implementation themselves.
 
 ## Project
 
