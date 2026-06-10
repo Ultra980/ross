@@ -1,0 +1,24 @@
+name: ISO CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: sudo apt install grub-pc-bin xorriso qemu-system-x86
+  
+    - name: Build ISO
+      run: make iso
+
+    - name: Verify the ISO
+      run: make verify
