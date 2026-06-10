@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install dependencies
-      run: sudo apt install grub-pc-bin xorriso qemu-system-x86
+      run: sudo apt update && sudo apt install grub-pc-bin xorriso qemu-system-x86
   
     - name: Build ISO
       run: make iso
