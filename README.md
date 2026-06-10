@@ -11,11 +11,21 @@ rustup toolchain install nightly --component rust-src
 
 You also need grub and qemu x86.
 
-arch: `sudo pacman -S grub xorriso qemu-system-x86`
+arch:
+```sh
+sudo pacman -S grub xorriso qemu-system-x86
+```
 
-debian/ubuntu and derivatives: `sudo apt install grub-pc-bin xorriso qemu-system-x86`
+debian/ubuntu and derivatives:
+```sh
+sudo apt install grub-pc-bin xorriso qemu-system-x86
+```
 
-macos: `brew install i686-elf-grub qemu`
+macos:
+```sh
+brew install i686-elf-grub qemu
+```
+
 
 Then just run the kernel with `make run`.
 
